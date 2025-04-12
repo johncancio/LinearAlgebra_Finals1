@@ -4,7 +4,7 @@ using TMPro;
 
 public class RectangleGenerator : MonoBehaviour
 {
-public Material rectangleMaterial;
+    public Material rectangleMaterial;
 
     public float width = 2f;
     public float height = 1f;
@@ -95,15 +95,15 @@ public Material rectangleMaterial;
 
     private Vector3[] GetRectangleFace(float zOffset, Quaternion rotation, Vector3 center, Vector3 size)
     {
-        float hw = size.x * 0.5f;
-        float hh = size.y * 0.5f;
+        float hw = size.x;
+        float hh = size.y;
 
         Vector3[] corners = new Vector3[]
         {
-            new Vector3(-hw, -hh, zOffset),
-            new Vector3(hw, -hh, zOffset),
+            new Vector3(0, 0, zOffset),
+            new Vector3(hw, 0, zOffset),
             new Vector3(hw, hh, zOffset),
-            new Vector3(-hw, hh, zOffset)
+            new Vector3(0, hh, zOffset)
         };
 
         for (int i = 0; i < corners.Length; i++)
